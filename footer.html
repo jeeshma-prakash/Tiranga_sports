@@ -1,0 +1,71 @@
+<!-- Site Footer -->
+<footer class="site-footer" role="contentinfo">
+	<!-- Decorative overlap image at the top of the footer (no 'cloud' class names used) -->
+	<div class="footer-top-overlap" aria-hidden="true">
+		<img src="assets/images/bg-footer - Copy.png" alt="" class="footer-top-image" />
+	</div>
+
+	<div class="footer-inner">
+		<div class="footer-columns">
+			<section class="footer-col">
+				<h3 class="footer-title">Tiranga Sports</h3>
+				<p class="footer-text">Fueling passion for the game. Match news, fixtures, academy programs, and community events—one club, one spirit.</p>
+				<ul class="footer-social">
+                            <div class="contact-social-links" role="group" aria-label="Social media links">
+                                <a href="https://instagram.com/tirangasports" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/@tirangasports" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/company/tiranga-sports-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                            </div>
+				</ul>
+			</section>
+
+			<nav class="footer-col" aria-label="Quick links">
+				<h3 class="footer-title">Quick Links</h3>
+				<ul class="footer-links">
+					<!-- <li><a href="#">Teams</a></li> -->
+					<!-- <li><a href="#">Fixtures &amp; Results</a></li> -->
+					<!-- <li><a href="#">Tickets</a></li> -->
+					<li><a href="#">Merch Store</a></li>
+					<li><a href="#">Academy</a></li>
+					<li><a href="#">Community</a></li>
+				</ul>
+			</nav>
+
+			<section class="footer-col">
+				<h3 class="footer-title">Support</h3>
+				<ul class="footer-links">
+					<li><a href="#">Contact</a></li>
+					<li><a href="#">Sponsorship</a></li>
+					<!-- <li><a href="#">Volunteer</a></li> -->
+					<!-- <li><a href="#">Media</a></li> -->
+					<!-- <li><a href="#">Privacy Policy</a></li> -->
+					<li><a href="#">Terms of Use</a></li>
+				</ul>
+			</section>
+
+			<section class="footer-col">
+				<h3 class="footer-title">Newsletter</h3>
+				<p class="footer-text">Get weekly updates on matches, signings, and exclusive offers.</p>
+				<form class="footer-form" action="#" method="post" onsubmit="return false;">
+					<label for="newsletter-email" class="visually-hidden">Email address</label>
+					<input id="newsletter-email" type="email" name="email" placeholder="Your email" required>
+					<button type="submit" class="footer-btn">Subscribe</button>
+				</form>
+			</section>
+		</div>
+
+		<div class="footer-bottom">
+			<p class="footer-copy">© <span id="year"></span> Tiranga Sports. All rights reserved.</p>
+			<p class="footer-made">Built with passion for sport.</p>
+		</div>
+	</div>
+
+	<script>
+		// Set current year in footer
+		(function () {
+			var y = document.getElementById('year');
+			if (y) y.textContent = new Date().getFullYear();
+		})();
+	</script>
+</footer>
+

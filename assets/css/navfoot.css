@@ -1,3 +1,182 @@
 .navbar {
     background: #ff993300;
 }
+
+/* -------- Footer -------- */
+.site-footer {
+    position: relative;
+    z-index: 1;
+    /* background:linear-gradient(to bottom, #fcfcfc, #1388083a); */
+    background: #fcfcfc;
+    color: #000000;
+    padding: 4rem 1rem 2rem;
+    margin-top: 33rem;
+}
+
+/* Decorative image that overlaps the top of the footer */
+.footer-top-overlap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: -33rem; /* overlap amount (desktop) */
+    /* width: 100%; */
+    z-index: 1000;
+    pointer-events: none; /* don't block interactions above */
+}
+
+.footer-top-overlap .footer-top-image {
+    display: block;
+    width: 100%;
+    height: 70vh;
+}
+
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.footer-col {
+    min-width: 0;
+}
+
+.footer-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin: 0 0 0.75rem;
+    color: #138808;
+}
+
+.footer-text {
+    margin: 0 0 1rem;
+    opacity: 0.9;
+}
+
+.footer-links,
+.footer-social {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-links li + li,
+.footer-social li + li {
+    margin-top: 0.5rem;
+}
+
+.footer-links a,
+.footer-social a {
+    color: #0f1c3f;
+    text-decoration: none;
+    opacity: 0.9;
+    transition: color 0.2s ease, opacity 0.2s ease;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+    color: #ff9933;
+    opacity: 1;
+}
+
+.footer-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin-top: 0.5rem;
+}
+
+.footer-form input[type="email"] {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    border: 1px solid rgba(66, 66, 66, 0.15);
+    background: #ffffff;
+    color: #000000;
+}
+
+.footer-form input[type="email"]::placeholder {
+    color: #2c2c2c;
+}
+
+.footer-btn {
+    padding: 0.6rem 0.9rem;
+    border-radius: 6px;
+    background: #ff9933;
+    color: #ffffff;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.footer-btn:hover {
+    filter: brightness(0.95);
+}
+
+.footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    font-size: 0.9rem;
+    opacity: 0.9;
+}
+
+.footer-copy,
+.footer-made {
+    margin: 0;
+}
+
+.visually-hidden {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+}
+
+/* Responsive layout for footer columns */
+@media (max-width: 1024px) {
+    .footer-columns {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .footer-columns {
+        grid-template-columns: 1fr;
+    }
+    .footer-form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .footer-btn {
+        width: 100%;
+    }
+}
+
+/* Responsive overlap offsets (mimicking the provided breakpoints) */
+@media (max-width: 973px) {
+    .footer-top-overlap { top: -9rem; }
+}
+
+@media (max-width: 729px) {
+    .footer-top-overlap { top: -7rem; }
+}
+
+@media (max-width: 570px) {
+    .footer-top-overlap { top: -4rem; }
+}
+
+@media (max-width: 330px) {
+    .footer-top-overlap { top: -3rem; }
+}
