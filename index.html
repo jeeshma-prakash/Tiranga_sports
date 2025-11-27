@@ -27,18 +27,32 @@
         <div class="hero-overlay"></div>
         <div class="hero-content container d-flex flex-column justify-content-center ">
             <div class="mt-5 pt-5 d-flex flex-column gap-3 align-items-center">
-            <p class="hero-eyebrow mb-3">Sports For Every Village</p>
-            <h1 class="display-4 fw-bold text-uppercase mb-3">Empowering Rural India Through Sports 
-            </h1>
-            <p class="lead mb-4">Building Champions from the Villages with access to coaching, equipment, and safe play
-                spaces.</p>
-            <div class="d-flex flex-wrap gap-3">
-                <a class="btn btn-lg hero-btn-donate" href="#donate">Donate Now</a>
-                <a class="btn btn-lg hero-btn-join" href="#volunteer">Join Our Mission</a>
-            </div>
+                <p class="hero-eyebrow mb-3">Sports For Every Village</p>
+                <h1 class="display-4 fw-bold text-uppercase mb-3">Empowering Rural India Through Sports
+                </h1>
+                <p class="lead mb-4">Building Champions from the Villages with access to coaching, equipment, and safe
+                    play
+                    spaces.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a class="btn btn-lg hero-btn-donate" href="#donate">Donate Now</a>
+                    <a class="btn btn-lg hero-btn-join" href="#volunteer">Join Our Mission</a>
+                </div>
             </div>
         </div>
     </section>
+    <!-- Wave divider between hero and about -->
+    <div class="hero-wave" aria-hidden="true">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <defs>
+                <linearGradient id="aboutGradient" x1="0%" x2="100%" y1="0%" y2="0%">
+                    <stop offset="0%" stop-color="rgba(255,153,51,0.18)" />
+                    <stop offset="50%" stop-color="#ffffff" />
+                    <stop offset="100%" stop-color="rgba(19,136,8,0.15)" />
+                </linearGradient>
+            </defs>
+            <path d="M0,48 C240,120 420,0 720,48 C1020,96 1200,16 1440,64 L1440,120 L0,120 Z" fill="white"></path>
+        </svg>
+    </div>
     <!-- about us -->
     <section class="about-section">
         <div class="container position-relative">
@@ -84,20 +98,20 @@
 
                         <ul class="about-stats mt-5">
                             <li>
-                                <span class="about-stat-number">18+</span>
-                                <span class="about-stat-label">Village training pods</span>
+                                <span class="about-stat-number" data-target="800" data-suffix="+">0+</span>
+                                <span class="about-stat-label"> Rural children trained</span>
                             </li>
                             <li>
-                                <span class="about-stat-number">1.2k+</span>
-                                <span class="about-stat-label">Coaching hours yearly</span>
+                                <span class="about-stat-number" data-target="50" data-suffix="+">0+</span>
+                                <span class="about-stat-label">Girls trained in self-defense</span>
                             </li>
                             <li>
-                                <span class="about-stat-number">65%</span>
+                                <span class="about-stat-number" data-target="65" data-suffix="%">0%</span>
                                 <span class="about-stat-label">Girls retained yearly</span>
                             </li>
                             <li>
-                                <span class="about-stat-number">05</span>
-                                <span class="about-stat-label">Sports verticals</span>
+                                <span class="about-stat-number" data-target="10" data-suffix="+">0+</span>
+                                <span class="about-stat-label">Rural coaches certified</span>
                             </li>
                         </ul>
                     </div>
@@ -174,7 +188,8 @@
 
                 <article class="vm-panel vm-panel--mission" data-seq="2">
                     <div class="vm-panel-header">
-                        <span class="vm-panel-icon"><i class="fa-solid fa-compass-drafting" aria-hidden="true"></i></span>
+                        <span class="vm-panel-icon"><i class="fa-solid fa-compass-drafting"
+                                aria-hidden="true"></i></span>
                         <div>
                             <p class="vm-panel-label mb-1">Mission</p>
                             <h3 class="vm-panel-title">How we activate that vision</h3>
@@ -202,6 +217,10 @@
             </article>
         </div>
     </section>
+    <!-- our team -->
+     <section>
+        
+     </section>
     <!-- our programs section -->
     <section id="programs" class="py-5">
         <div class="container">
@@ -243,8 +262,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                     <article class="program-card" data-program="skating">
                         <div class="program-visual">
-                            <img src="assets/images/skating.png"
-                                alt="Coach assisting village kids with inline skating">
+                            <img src="assets/images/skating.png" alt="Coach assisting village kids with inline skating">
                         </div>
                         <div class="program-body">
                             <h3 class="program-title">🛼 Skating</h3>
@@ -259,8 +277,7 @@
                 <div class="col-12 col-md-6 col-xl-3">
                     <article class="program-card" data-program="swimming">
                         <div class="program-visual">
-                            <img src="assets/images/swimming.png"
-                                alt="Children learning swimming techniques in a pool" >
+                            <img src="assets/images/swimming.png" alt="Children learning swimming techniques in a pool">
                         </div>
                         <div class="program-body">
                             <h3 class="program-title">🏊 Swimming</h3>
@@ -292,6 +309,86 @@
         </div>
     </section>
 
+    <!-- testimonials -->
+    <section>
+        <div class="container container-custom ">
+            <!-- Trust header -->
+            <div class="trust-row">
+                    <span class="section-eyebrow">Testimonials</span>
+                    <h2 class="display-6 fw-bold mb-3">What Our Athletes Are Saying</h2>
+                    <p class="lead mb-4" id="testimonialLead">Real stories from students who have transformed through our sports programs.</p>
+            </div>
+
+            <!-- Testimonial section -->
+            <div class="testi-shell">
+
+                <!-- LEFT fixed -->
+                <div class="left-col">
+                    <div class="left-title">Reviews from <br>Our Happy Athletes</div>
+                    <div class="left-desc">Building champions through sports, discipline and teamwork.</div>
+
+                    <div class="controls-row">
+                        <!-- button aligned to right -->
+                        <a class="btn-explore ms-auto" href="testimonial.html">Explore All Testimonials</a>
+                    </div>
+                </div>
+
+                <!-- RIGHT - carousel -->
+                <div class="right-col">
+                    <div class="carousel-viewport">
+                        <div class="carousel-track" id="carouselTrack">
+                            <!-- Cards: initial set - script will duplicate these for seamless loop -->
+                            <div class="testi-card">
+                                <p class="testi-text">“This sports academy transformed my life — I learned discipline,
+                                    confidence and now compete in inter-school matches. Coaches are very dedicated.”</p>
+                                <div class="stars">★★★★★</div>
+                                <div class="profile-row"><img src="https://i.pravatar.cc/150?img=12" alt="">
+                                    <div><strong>Ravi Kumar</strong>
+                                        <div style="color:var(--muted);font-size:13px">Karate Student</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testi-card">
+                                <p class="testi-text">“The training here built my teamwork and leadership skills. As a rural kid,
+                                    I never thought I'd represent my district, but now I do!”</p>
+                                <div class="stars">★★★★★</div>
+                                <div class="profile-row"><img src="https://i.pravatar.cc/150?img=25" alt="">
+                                    <div><strong>Priya Nair</strong>
+                                        <div style="color:var(--muted);font-size:13px">Athletics Champion</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testi-card">
+                                <p class="testi-text">“Swimming lessons here gave me water confidence. I started from zero and now
+                                    I'm part of the state team. Grateful for this academy.”</p>
+                                <div class="stars">★★★★★</div>
+                                <div class="profile-row"><img src="https://i.pravatar.cc/150?img=32" alt="">
+                                    <div><strong>Amit Sharma</strong>
+                                        <div style="color:var(--muted);font-size:13px">Swimming Student</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="testi-card">
+                                <p class="testi-text">“Skating taught me balance and perseverance. The coaches push us to be our best,
+                                    and I've won medals in local competitions.”</p>
+                                <div class="stars">★★★★★</div>
+                                <div class="profile-row"><img src="https://i.pravatar.cc/150?img=47" alt="">
+                                    <div><strong>Sneha Patel</strong>
+                                        <div style="color:var(--muted);font-size:13px">Skating Enthusiast</div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <!-- CSR & donor partnership section -->
     <section id="csr-partnership" class="py-5 position-relative">
@@ -305,7 +402,8 @@
                 <div class="row g-4 align-items-center">
                     <div class="col-lg-7">
                         <h2 class="csr-title">Partner with Us to Empower Rural India Through Sports</h2>
-                        <p class="csr-lede mb-4">Bring structured sport, mentorship, and safe play arenas to rural children
+                        <p class="csr-lede mb-4">Bring structured sport, mentorship, and safe play arenas to rural
+                            children
                             while advancing your CSR mandates with measurable impact and nationwide recognition.</p>
                         <div class="csr-badges">
                             <span>Education</span>
@@ -316,7 +414,8 @@
                     </div>
                     <div class="col-lg-5">
                         <div class="csr-cta-stack">
-                            <a class="btn btn-lg csr-download-btn" href="assets/docs/corporate-partnership-proposal.pdf" download>
+                            <a class="btn btn-lg csr-download-btn" href="assets/docs/corporate-partnership-proposal.pdf"
+                                download>
                                 <i class="fa-solid fa-download" aria-hidden="true"></i>
                                 Corporate Partnership Proposal
                             </a>
@@ -324,7 +423,8 @@
                                 <i class="fa-solid fa-video" aria-hidden="true"></i>
                                 Book immersion call
                             </a>
-                            <p class="csr-cta-note mb-0">We will share a tailor-made proposal deck aligned to your CSR focus areas.</p>
+                            <p class="csr-cta-note mb-0">We will share a tailor-made proposal deck aligned to your CSR
+                                focus areas.</p>
                         </div>
                     </div>
                 </div>
@@ -341,17 +441,23 @@
                     </div>
                     <ul class="csr-reason-list">
                         <li>
-                            <span class="csr-reason-icon"><i class="fa-solid fa-scale-balanced" aria-hidden="true"></i></span>
+                            <span class="csr-reason-icon"><i class="fa-solid fa-scale-balanced"
+                                    aria-hidden="true"></i></span>
                             <div>
-                                <p class="csr-reason-heading">CSR alignment with Education, Women Empowerment, Rural Development, and Sports Promotion</p>
-                                <p class="csr-reason-text">Mapped to Schedule VII of the CSR Act with programs co-created alongside community leaders to ensure inclusive access.</p>
+                                <p class="csr-reason-heading">CSR alignment with Education, Women Empowerment, Rural
+                                    Development, and Sports Promotion</p>
+                                <p class="csr-reason-text">Mapped to Schedule VII of the CSR Act with programs
+                                    co-created alongside community leaders to ensure inclusive access.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="csr-reason-icon"><i class="fa-solid fa-chart-line" aria-hidden="true"></i></span>
+                            <span class="csr-reason-icon"><i class="fa-solid fa-chart-line"
+                                    aria-hidden="true"></i></span>
                             <div>
-                                <p class="csr-reason-heading">Transparent fund utilization with reports &amp; recognition</p>
-                                <p class="csr-reason-text">Quarterly dashboards, storytelling assets, and on-ground showcases keep your teams and stakeholders informed and celebrated.</p>
+                                <p class="csr-reason-heading">Transparent fund utilization with reports &amp;
+                                    recognition</p>
+                                <p class="csr-reason-text">Quarterly dashboards, storytelling assets, and on-ground
+                                    showcases keep your teams and stakeholders informed and celebrated.</p>
                             </div>
                         </li>
                     </ul>
@@ -370,28 +476,35 @@
                             <span class="csr-benefit-icon"><i class="fa-solid fa-shirt" aria-hidden="true"></i></span>
                             <div>
                                 <p class="csr-benefit-heading">Co-branded kits &amp; arenas</p>
-                                <p class="csr-benefit-text">Merch, grounds, and leaderboard walls showcase your logo during every tournament circuit.</p>
+                                <p class="csr-benefit-text">Merch, grounds, and leaderboard walls showcase your logo
+                                    during every tournament circuit.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="csr-benefit-icon"><i class="fa-solid fa-file-lines" aria-hidden="true"></i></span>
+                            <span class="csr-benefit-icon"><i class="fa-solid fa-file-lines"
+                                    aria-hidden="true"></i></span>
                             <div>
                                 <p class="csr-benefit-heading">Audit-ready documentation</p>
-                                <p class="csr-benefit-text">80G/12A compliant reporting packs with beneficiary narratives tailored for ESG disclosures.</p>
+                                <p class="csr-benefit-text">80G/12A compliant reporting packs with beneficiary
+                                    narratives tailored for ESG disclosures.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="csr-benefit-icon"><i class="fa-solid fa-bullhorn" aria-hidden="true"></i></span>
+                            <span class="csr-benefit-icon"><i class="fa-solid fa-bullhorn"
+                                    aria-hidden="true"></i></span>
                             <div>
                                 <p class="csr-benefit-heading">Earned media &amp; recognition</p>
-                                <p class="csr-benefit-text">Press drops, reels, and regional media tie-ups amplify your rural sports story.</p>
+                                <p class="csr-benefit-text">Press drops, reels, and regional media tie-ups amplify your
+                                    rural sports story.</p>
                             </div>
                         </li>
                         <li>
-                            <span class="csr-benefit-icon"><i class="fa-solid fa-certificate" aria-hidden="true"></i></span>
+                            <span class="csr-benefit-icon"><i class="fa-solid fa-certificate"
+                                    aria-hidden="true"></i></span>
                             <div>
                                 <p class="csr-benefit-heading">80G &amp; 12A compliant donations (if applicable)</p>
-                                <p class="csr-benefit-text">Enable tax-efficient giving and streamlined documentation for finance and compliance teams.</p>
+                                <p class="csr-benefit-text">Enable tax-efficient giving and streamlined documentation
+                                    for finance and compliance teams.</p>
                             </div>
                         </li>
                     </ul>
@@ -407,35 +520,50 @@
                 <div class="col-lg-5">
                     <span class="section-eyebrow">Donate</span>
                     <h2 class="display-6 fw-bold mb-3">Fuel a rural athlete today</h2>
-                    <p class="lead mb-4" id="donationLead">Your support funds equipment, self‑defense camps for girls, and village coach fellowships.</p>
+                    <p class="lead mb-4" id="donationLead">Your support funds equipment, self‑defense camps for girls,
+                        and village coach fellowships.</p>
                     <ul class="list-unstyled donation-impact-list mb-4" aria-label="Your impact">
-                        <li><i class="fa-solid fa-dumbbell" aria-hidden="true"></i> Training equipment for under-resourced squads</li>
-                        <li><i class="fa-solid fa-user-shield" aria-hidden="true"></i> Self‑defense camps empowering rural girls</li>
-                        <li><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Village coach fellowships & mentoring</li>
+                        <li><i class="fa-solid fa-dumbbell" aria-hidden="true"></i> Training equipment for
+                            under-resourced squads</li>
+                        <li><i class="fa-solid fa-user-shield" aria-hidden="true"></i> Self‑defense camps empowering
+                            rural girls</li>
+                        <li><i class="fa-solid fa-chalkboard-user" aria-hidden="true"></i> Village coach fellowships &
+                            mentoring</li>
                     </ul>
                     <div class="donation-alt-actions d-flex flex-wrap gap-2">
                         <a class="involvement-chip" href="#volunteer" aria-label="Volunteer with us">Volunteer</a>
-                        <a class="involvement-chip" href="mailto:impact@tirangasports.org?subject=Sponsor%20Equipment" aria-label="Sponsor equipment via email">Sponsor Equipment</a>
-                        <a class="involvement-chip" href="#csr-partnership" aria-label="Start a training center partnership">Start a Training Center</a>
+                        <a class="involvement-chip" href="mailto:impact@tirangasports.org?subject=Sponsor%20Equipment"
+                            aria-label="Sponsor equipment via email">Sponsor Equipment</a>
+                        <a class="involvement-chip" href="#csr-partnership"
+                            aria-label="Start a training center partnership">Start a Training Center</a>
                     </div>
-                    <p class="small text-muted mt-3">Prefer a direct transfer? Email <a href="mailto:impact@tirangasports.org" class="text-decoration-none">impact@tirangasports.org</a> for bank details.</p>
+                    <p class="small text-muted mt-3">Prefer a direct transfer? Email <a
+                            href="mailto:impact@tirangasports.org"
+                            class="text-decoration-none">impact@tirangasports.org</a> for bank details.</p>
                 </div>
                 <!-- Donation widget column -->
                 <div class="col-lg-7">
                     <div class="donation-widget card border-0 shadow-lg rounded-4 p-4">
                         <h3 class="h5 fw-semibold mb-3">Choose an amount</h3>
                         <div class="donation-amounts" role="group" aria-label="Suggested donation amounts">
-                            <button type="button" class="donation-amount-btn" data-amount="500" aria-label="Donate ₹500">₹500</button>
-                            <button type="button" class="donation-amount-btn" data-amount="1000" aria-label="Donate ₹1000">₹1,000</button>
-                            <button type="button" class="donation-amount-btn" data-amount="5000" aria-label="Donate ₹5000">₹5,000</button>
-                            <button type="button" class="donation-amount-btn" data-amount="10000" aria-label="Donate ₹10000">₹10,000</button>
+                            <button type="button" class="donation-amount-btn" data-amount="500"
+                                aria-label="Donate ₹500">₹500</button>
+                            <button type="button" class="donation-amount-btn" data-amount="1000"
+                                aria-label="Donate ₹1000">₹1,000</button>
+                            <button type="button" class="donation-amount-btn" data-amount="5000"
+                                aria-label="Donate ₹5000">₹5,000</button>
+                            <button type="button" class="donation-amount-btn" data-amount="10000"
+                                aria-label="Donate ₹10000">₹10,000</button>
                         </div>
                         <form id="donationForm" class="mt-3" autocomplete="off" aria-describedby="paymentHint">
                             <label for="donateAmount" class="form-label fw-semibold">Custom amount (min ₹100)</label>
                             <div class="donation-input-group">
                                 <span class="donation-currency" aria-hidden="true">₹</span>
-                                <input id="donateAmount" name="amount" type="number" inputmode="numeric" min="100" step="100" placeholder="500" required aria-required="true" aria-label="Enter custom donation amount">
-                                <button type="button" class="btn btn-primary rzp-donate-btn" id="rzpDonateBtn" aria-label="Donate now with Razorpay">
+                                <input id="donateAmount" name="amount" type="number" inputmode="numeric" min="100"
+                                    step="100" placeholder="500" required aria-required="true"
+                                    aria-label="Enter custom donation amount">
+                                <button type="button" class="btn btn-primary rzp-donate-btn" id="rzpDonateBtn"
+                                    aria-label="Donate now with Razorpay">
                                     <i class="fa-solid fa-heart me-1" aria-hidden="true"></i> Donate Now
                                 </button>
                             </div>
@@ -450,67 +578,194 @@
                             <summary class="tiers-summary">See impact tiers</summary>
                             <div class="row g-3 mt-1" id="donationTiers" aria-label="Donation tiers">
                                 <div class="col-6 col-md-3">
-                                    <div class="tier-card" data-amount="500" tabindex="0" aria-label="₹500 Starter impact">
+                                    <div class="tier-card" data-amount="500" tabindex="0"
+                                        aria-label="₹500 Starter impact">
                                         <p class="tier-amt mb-0">₹500</p>
                                         <p class="tier-desc mb-0 small">Equipment for one student</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="tier-card" data-amount="1000" tabindex="0" aria-label="₹1000 Impact tier">
+                                    <div class="tier-card" data-amount="1000" tabindex="0"
+                                        aria-label="₹1000 Impact tier">
                                         <p class="tier-amt mb-0">₹1,000</p>
                                         <p class="tier-desc mb-0 small">Self‑defense camp (10 girls)</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="tier-card" data-amount="5000" tabindex="0" aria-label="₹5000 Champion tier">
+                                    <div class="tier-card" data-amount="5000" tabindex="0"
+                                        aria-label="₹5000 Champion tier">
                                         <p class="tier-amt mb-0">₹5,000</p>
                                         <p class="tier-desc mb-0 small">Coach training module</p>
                                     </div>
                                 </div>
                                 <div class="col-6 col-md-3">
-                                    <div class="tier-card" data-amount="10000" tabindex="0" aria-label="₹10000 Custom higher support">
+                                    <div class="tier-card" data-amount="10000" tabindex="0"
+                                        aria-label="₹10000 Custom higher support">
                                         <p class="tier-amt mb-0">₹10,000</p>
                                         <p class="tier-desc mb-0 small">Scale multi‑sport pod</p>
                                     </div>
                                 </div>
                             </div>
                         </details>
-                        <p class="donation-disclaimer small text-muted mt-3 mb-0">Live demo uses a test key. For production, generate server-side Razorpay orders and replace the placeholder key. All amounts are processed in INR.</p>
+                        <p class="donation-disclaimer small text-muted mt-3 mb-0">Live demo uses a test key. For
+                            production, generate server-side Razorpay orders and replace the placeholder key. All
+                            amounts are processed in INR.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- testimonial -->
-     <section>
-        
-     </section>
+    <!-- gallery-->
+    <section class="t2-gallery">
+        <div class="gallery-section py-5">
+            <div class="container">
+                <div class="contact-heading text-center mb-5">
+                    <span class="section-eyebrow text-uppercase">Gallery</span>
+                    <h2 class="contact-title"> Events, Coaching &amp; Community</h2>
+                    <p class="contact-subtitle">Browse event highlights and training moments captured from our programs
+                    </p>
+                    <div class="mt-3">
+                        <a href="gallery.html" class="btn btn-md hero-btn-join t2-gallery-cta"
+                            aria-label="See more photos">See more</a>
+                    </div>
+                </div>
+            </div>
 
+            <div class="t2-carousel-wrap">
+                <div class="t2-stage">
+                    <div class="t2-track" id="t2-track">
+                        <div class="t2-card" data-index="0"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o1.jpeg?updatedAt=1754289569411"></div>
+                        <div class="t2-card" data-index="1"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o2.jpeg?updatedAt=1754289569307"></div>
+                        <div class="t2-card" data-index="2"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o4.jpeg?updatedAt=1754289569398"></div>
+                        <div class="t2-card" data-index="3"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o3.jpeg?updatedAt=1754289569422"></div>
+                        <div class="t2-card" data-index="4"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o5.jpeg?updatedAt=1754289569406"></div>
+                        <div class="t2-card" data-index="5"><img
+                                src="https://ik.imagekit.io/gopichakradhar/luffy/o6.jpeg?updatedAt=1754289569438"></div>
+                    </div>
+                </div>
+
+                <div class="t2-controls">
+                    <div class="t2-dots" id="t2-dots"></div>
+                </div>
+            </div>
+    </section>
+
+    <!-- latest events and news -->
+    <section id="latest-updates" class="news-section py-5">
+        <div class="container">
+            <div class="news-header d-flex flex-column flex-lg-row gap-4 justify-content-between align-items-start">
+                <div>
+                    <span class="section-eyebrow text-uppercase">Updates</span>
+                    <h2 class="news-title mb-2">Recently Added Highlights</h2>
+                    <p class="news-subtitle mb-0">Fresh stories from our arenas, policy updates, and impact reports—curated to keep supporters in the loop.</p>
+                </div>
+                <div class="news-tabs" role="tablist" aria-label="Filter stories">
+                    <button type="button" class="news-tab active" data-filter="all" role="tab" aria-selected="true">All</button>
+                    <button type="button" class="news-tab" data-filter="events" role="tab" aria-selected="false">Events</button>
+                    <button type="button" class="news-tab" data-filter="latest" role="tab" aria-selected="false">Latest News</button>
+                </div>
+            </div>
+
+            <div class="row g-4 align-items-stretch news-grid">
+                <div class="col-lg-7">
+                    <article class="news-feature-card news-card" data-category="events">
+                        <div class="news-feature-media">
+                            <img src="https://images.unsplash.com/photo-1461896836934-ffe607ba8211?auto=format&fit=crop&w=900&q=80" alt="Athletes gathering outside a courthouse" loading="lazy">
+                        </div>
+                        <div class="news-feature-body">
+                            <p class="news-tag">Events • Policy</p>
+                            <h3 class="news-feature-title">Behalf of the undersigned organizations and the millions of members.</h3>
+                            <p class="news-feature-copy mb-0">Coalitions from five districts submitted a joint resolution seeking safer transport and longer practice hours for government schools.</p>
+                            <div class="news-meta">Community • 6 min read • 30 November 2025</div>
+                        </div>
+                    </article>
+                </div>
+                <div class="col-lg-5">
+                    <div class="news-compact-list">
+                        <article class="news-compact-card news-card" data-category="events">
+                            <div class="news-compact-media">
+                                <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?auto=format&fit=crop&w=400&q=80" alt="Students at an inter-school event" loading="lazy">
+                            </div>
+                            <div class="news-compact-body">
+                                <p class="news-tag">World • Events</p>
+                                <h4 class="news-compact-title">Under longtan court prevailed National Labor Relations</h4>
+                                <div class="news-meta">Events • 3 min read</div>
+                            </div>
+                        </article>
+                        <article class="news-compact-card news-card" data-category="latest">
+                            <div class="news-compact-media">
+                                <img src="https://images.unsplash.com/photo-1518085250887-2f903c200fee?auto=format&fit=crop&w=400&q=80" alt="Healthcare volunteers raising placards" loading="lazy">
+                            </div>
+                            <div class="news-compact-body">
+                                <p class="news-tag">Politics • Latest</p>
+                                <h4 class="news-compact-title">The lenial prison fight first broke out</h4>
+                                <div class="news-meta">Latest • 4 min read</div>
+                            </div>
+                        </article>
+                        <article class="news-compact-card news-card" data-category="events">
+                            <div class="news-compact-media">
+                                <img src="https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&w=400&q=80" alt="Police officers meeting community leaders" loading="lazy">
+                            </div>
+                            <div class="news-compact-body">
+                                <p class="news-tag">World • Events</p>
+                                <h4 class="news-compact-title">Ecuador police swore to riot shield where she died</h4>
+                                <div class="news-meta">Events • 5 min read</div>
+                            </div>
+                        </article>
+                        <article class="news-compact-card news-card" data-category="latest">
+                            <div class="news-compact-media">
+                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=400&q=80" alt="Children marching for justice" loading="lazy">
+                            </div>
+                            <div class="news-compact-body">
+                                <p class="news-tag">World • Latest</p>
+                                <h4 class="news-compact-title">China launches cut at least twice This is said.</h4>
+                                <div class="news-meta">Latest • 2 min read</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- contact us -->
     <section id="contact" class="contact-section py-5">
         <div class="container">
             <div class="contact-heading text-center mb-5">
                 <span class="section-eyebrow text-uppercase">Contact Us</span>
                 <h2 class="contact-title">We are here to support your next step</h2>
-                <p class="contact-subtitle">Reach out for sponsorship collaborations, student enrollment queries, or volunteer opportunities. Our team responds within two working days.</p>
+                <p class="contact-subtitle">Reach out for sponsorship collaborations, student enrollment queries, or
+                    volunteer opportunities. Our team responds within two working days.</p>
             </div>
 
             <div class="row g-4 align-items-stretch mb-4 contact-top">
                 <div class="col-lg-5">
                     <article class="contact-card contact-intro h-100">
                         <h3 class="contact-card-title">Message us, we will be in touch shortly</h3>
-                        <p class="contact-card-copy">Tell us how you’d like to collaborate with Tiranga Sports Foundation. We’ll connect you to the right program lead.</p>
+                        <p class="contact-card-copy">Tell us how you’d like to collaborate with Tiranga Sports
+                            Foundation. We’ll connect you to the right program lead.</p>
                         <ul class="contact-bullet list-unstyled mb-4">
-                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Dedicated SPOC for CSR &amp; sponsorships</li>
-                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safeguarding-first approach for student enrollment</li>
-                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Community-led volunteering experiences</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Dedicated SPOC for CSR &amp;
+                                sponsorships</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Safeguarding-first approach
+                                for student enrollment</li>
+                            <li><i class="fa-solid fa-circle-check" aria-hidden="true"></i> Community-led volunteering
+                                experiences</li>
                         </ul>
                         <div class="contact-social">
                             <p class="mb-2 fw-semibold text-uppercase small tracking-wide">Follow us on social</p>
                             <div class="contact-social-links" role="group" aria-label="Social media links">
-                                <a href="https://instagram.com/tirangasports" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
-                                <a href="https://www.youtube.com/@tirangasports" target="_blank" rel="noopener" aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
-                                <a href="https://www.linkedin.com/company/tiranga-sports-foundation" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in" aria-hidden="true"></i></a>
+                                <a href="https://instagram.com/tirangasports" target="_blank" rel="noopener"
+                                    aria-label="Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                                <a href="https://www.youtube.com/@tirangasports" target="_blank" rel="noopener"
+                                    aria-label="YouTube"><i class="fa-brands fa-youtube" aria-hidden="true"></i></a>
+                                <a href="https://www.linkedin.com/company/tiranga-sports-foundation" target="_blank"
+                                    rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"
+                                        aria-hidden="true"></i></a>
                             </div>
                         </div>
                     </article>
@@ -521,15 +776,18 @@
                             <div class="row g-3">
                                 <div class="col-md-6">
                                     <label for="contactName" class="form-label">Name</label>
-                                    <input type="text" class="form-control" id="contactName" name="name" placeholder="Full name" required>
+                                    <input type="text" class="form-control" id="contactName" name="name"
+                                        placeholder="Full name" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="contactEmail" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="contactEmail" name="email" placeholder="you@email.com" required>
+                                    <input type="email" class="form-control" id="contactEmail" name="email"
+                                        placeholder="you@email.com" required>
                                 </div>
                                 <div class="col-md-6">
                                     <label for="contactPhone" class="form-label">Phone</label>
-                                    <input type="tel" class="form-control" id="contactPhone" name="phone" placeholder="Preferred contact number">
+                                    <input type="tel" class="form-control" id="contactPhone" name="phone"
+                                        placeholder="Preferred contact number">
                                 </div>
                                 <div class="col-md-6">
                                     <label for="contactInquiry" class="form-label">Inquiry Type</label>
@@ -542,7 +800,8 @@
                                 </div>
                                 <div class="col-12">
                                     <label for="contactMessage" class="form-label">Message</label>
-                                    <textarea class="form-control" id="contactMessage" name="message" rows="4" placeholder="Tell us more about your request" required></textarea>
+                                    <textarea class="form-control" id="contactMessage" name="message" rows="4"
+                                        placeholder="Tell us more about your request" required></textarea>
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="btn btn-lg contact-submit w-100">Send Message</button>
@@ -557,37 +816,47 @@
             <div class="row g-4 align-items-stretch contact-bottom">
                 <div class="col-lg-6">
                     <div class="contact-map" aria-label="Map showing Tiranga Sports Foundation location">
-                        <iframe title="Tiranga Sports Foundation map" src="https://maps.google.com/maps?q=Tiranga%20Sports%20Foundation%2C%20New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed" loading="lazy"></iframe>
+                        <iframe title="Tiranga Sports Foundation map"
+                            src="https://maps.google.com/maps?q=Tiranga%20Sports%20Foundation%2C%20New%20Delhi&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            loading="lazy"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <article class="contact-card contact-touch h-100">
                         <h3 class="contact-card-title">Get in touch with us</h3>
-                        <p class="contact-card-copy">Visit our foundation office, mail the impact team, or call Monday–Saturday between 8am and 6pm.</p>
+                        <p class="contact-card-copy">Visit our foundation office, mail the impact team, or call
+                            Monday–Saturday between 8am and 6pm.</p>
                         <div class="contact-detail-grid">
                             <div class="contact-detail-box">
-                                <span class="contact-detail-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></span>
+                                <span class="contact-detail-icon"><i class="fa-solid fa-location-dot"
+                                        aria-hidden="true"></i></span>
                                 <div>
                                     <p class="contact-detail-label">Headquarter</p>
-                                    <p class="contact-detail-value mb-0">Tiranga Sports Foundation<br>Jogmaya Marg, New Delhi 110049</p>
+                                    <p class="contact-detail-value mb-0">Tiranga Sports Foundation<br>Jogmaya Marg, New
+                                        Delhi 110049</p>
                                 </div>
                             </div>
                             <div class="contact-detail-box">
-                                <span class="contact-detail-icon"><i class="fa-solid fa-envelope" aria-hidden="true"></i></span>
+                                <span class="contact-detail-icon"><i class="fa-solid fa-envelope"
+                                        aria-hidden="true"></i></span>
                                 <div>
                                     <p class="contact-detail-label">Email us</p>
-                                    <p class="contact-detail-value mb-0"><a href="mailto:impact@tirangasports.org">impact@tirangasports.org</a><br><a href="mailto:hello@tirangasports.org">hello@tirangasports.org</a></p>
+                                    <p class="contact-detail-value mb-0"><a
+                                            href="mailto:impact@tirangasports.org">impact@tirangasports.org</a><br><a
+                                            href="mailto:hello@tirangasports.org">hello@tirangasports.org</a></p>
                                 </div>
                             </div>
                             <div class="contact-detail-box">
-                                <span class="contact-detail-icon"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i></span>
+                                <span class="contact-detail-icon"><i class="fa-solid fa-phone-volume"
+                                        aria-hidden="true"></i></span>
                                 <div>
                                     <p class="contact-detail-label">Call us</p>
                                     <p class="contact-detail-value mb-0">+91 92030 12304<br>+91 83792 30391</p>
                                 </div>
                             </div>
                             <div class="contact-detail-box">
-                                <span class="contact-detail-icon"><i class="fa-solid fa-clock" aria-hidden="true"></i></span>
+                                <span class="contact-detail-icon"><i class="fa-solid fa-clock"
+                                        aria-hidden="true"></i></span>
                                 <div>
                                     <p class="contact-detail-label">Office hours</p>
                                     <p class="contact-detail-value mb-0">Mon – Sat: 8am – 6pm<br>Sunday: Closed</p>
@@ -600,16 +869,19 @@
         </div>
     </section>
     <!-- footer -->
-  <div id="footer"></div>
-    
+    <div id="footer"></div>
+
 
 
 
 
     <!-- bootstrap js cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
-        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap 5 for grid/utility only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <!-- Razorpay Checkout script -->
     <script src="https://checkout.razorpay.com/v1/checkout.js" async></script>
     <script src="assets/js/script.js"></script>

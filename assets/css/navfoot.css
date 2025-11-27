@@ -1,5 +1,13 @@
-.navbar {
-    background: #ff993300;
+
+.navbar-logo {
+    width: 100px;
+}
+.fixed-top {
+    position: absolute !important;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
 }
 
 /* -------- Footer -------- */
@@ -179,4 +187,60 @@
 
 @media (max-width: 330px) {
     .footer-top-overlap { top: -3rem; }
+}
+
+/* Mobile Navbar Styles */
+@media (max-width: 991.98px) { /* Bootstrap lg breakpoint */
+    .navbar-collapse {
+        position: fixed;
+        top: 0;
+        right: -50vw;
+        width: 50vw;
+        height: 100vh;
+        background: rgba(15, 28, 63, 0.95);
+        backdrop-filter: blur(10px);
+        transition: right 0.3s ease-in-out;
+        z-index: 1050;
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .navbar-collapse.show {
+        right: 0;
+    }
+
+    .navbar-collapse .navbar-nav {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+    }
+
+    .navbar-collapse .nav-item {
+        width: 100%;
+    }
+
+    .navbar-collapse .nav-link {
+        color: var(--white-color);
+        font-size: 1.2rem;
+        padding: 0.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .navbar-collapse .nav-link:hover {
+        color: var(--saffron-color);
+    }
+
+    .navbar-collapse .btn-donate {
+        margin-top: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-close {
+        align-self: flex-end;
+        margin-bottom: 1rem;
+    }
 }

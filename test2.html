@@ -1,185 +1,306 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Testimonials Section</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Testimonials — Sports Club (GSAP)</title>
 
-<!-- BOOTSTRAP 5 -->
+<!-- Bootstrap 5 for grid/utility only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
+<!-- GSAP -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
 <style>
-body {
-    font-family: "Poppins", sans-serif;
-    background: #f7f7f7;
+:root{
+  --muted:#9aa0a6;
+  --card-bg:#ffffff;
+  --card-shadow: 0 14px 30px rgba(16,24,40,0.06);
+  --accent:#00b894;
+  --left-width:360px;
+  --max-width:1220px;
+  --font-sans: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
-/* MAIN SECTION */
-.testimonial-section {
-    padding: 80px 0;
+/* Responsive left column width */
+@media (min-width: 900px) and (max-width: 1199px) {
+  :root { --left-width: 300px; }
+}
+@media (min-width: 1200px) {
+  :root { --left-width: 360px; }
 }
 
-/* LEFT SIDE */
-.left-content h3 {
-    color: #444;
-    font-weight: 500;
+/* Responsive body padding */
+@media (max-width: 575px) {
+  body { padding: 16px 8px; }
 }
 
-.left-content h2 {
-    margin-top: 5px;
-    font-size: 32px;
-    font-weight: 600;
+/* Hidden reference image you uploaded (local path) */
+.ref-image { display:none; }
+
+/* Wrapper */
+.container-custom{
+  max-width: var(--max-width);
+  margin: 0 auto;
 }
 
-.arrow-box span {
-    font-size: 22px;
-    margin-right: 12px;
-    cursor: pointer;
-    transition: 0.3s;
+/* Trustpilot-like header */
+.trust-row{ text-align:center; margin-bottom:20px; }
+.trust-row h3{ font-size:26px; margin:0; font-weight:700; }
+.trust-row p{ margin:6px 0 0; color:var(--muted); }
+
+/* Testimonial section card */
+.testi-shell{
+  background:#fff;
+  border-radius:18px;
+  padding:28px;
+  box-shadow: 0 8px 24px rgba(16,24,40,0.04);
+  display:flex;
+  gap:22px;
+  align-items:stretch;
+  overflow:hidden;
+  height: 45vh;
 }
 
-.arrow-box span:hover {
-    color: #000;
+/* Left fixed column */
+.left-col{
+  flex:0 0 var(--left-width);
+  max-width: var(--left-width);
+  padding-right:12px;
+  box-sizing:border-box;
+  background: url(assets/images/quote.png)no-repeat center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.quote-icon{ font-size:72px; color:#e0e2e4; line-height:1; }
+.left-title{ font-size:26px; font-weight:700;margin-top: 1.8rem; }
+.left-desc{ color:var(--muted); margin-top:10px; font-size:14px; }
+
+/* controls row (arrows + hr + button) */
+.controls-row{
+  align-items:center;
+  gap:12px;
+  margin-top:14px;
+}
+.arrows{ display:flex; align-items:center; gap:12px; }
+.hr-line{ width:120px; height:2px; background:#e6e6e6; border-radius:2px; }
+.btn-explore{ border-radius:8px; border:1px solid #111827; background:transparent; padding:8px 12px; font-weight:600;text-decoration: none; }
+
+/* Right carousel area: will overflow hidden */
+.right-col{ flex:1 1 auto; min-width:0;margin-top: 3rem; }
+
+/* Track: flex row containing cards and duplicated cards */
+.carousel-viewport{ overflow:hidden; position:relative; width:100%; }
+.carousel-track{
+  display:flex;
+  align-items:stretch;
+  gap:20px;
+  will-change:transform;
 }
 
-/* RIGHT SIDE BG - INDIAN FLAG GRADIENT */
-.right-bg {
-    background: linear-gradient(to bottom, #FF9933 0%, white 50%, #138808 100%);
-    padding: 50px 0;
-    overflow: hidden;
-    border-radius: 20px 0 0 20px;
+/* Card styling to match reference */
+.testi-card{
+  background:var(--card-bg);
+  border-radius:14px;
+  padding:18px;
+  min-height:220px;
+  box-shadow: var(--card-shadow);
+  position:relative;
+  flex: 0 0 auto; /* we'll set width via CSS breakpoints */
 }
 
-/* CAROUSEL */
-.carousel-track {
-    display: flex;
-    gap: 40px;
-    animation: slide 17s linear infinite;
+/* speech tail */
+.testi-card::after{
+  content:"";
+  position:absolute;
+  bottom:-12px;
+  left:40px;
+  width:0;
+  height:0;
+  border-left:12px solid transparent;
+  border-right:12px solid transparent;
+  border-top:12px solid var(--card-bg);
+  filter: drop-shadow(0 2px 6px rgba(16,24,40,0.03));
 }
 
-/* CARDS */
-.testi-card {
-    width: 350px;
-    background: #fff;
-    padding: 28px;
-    border-radius: 15px;
-    box-shadow: 0px 8px 25px rgba(0,0,0,0.15);
-}
+/* text & meta */
+.testi-text{ font-size:14px; color:#123; line-height:1.45; min-height:92px; }
+.stars{ color:var(--accent); margin:10px 0; font-size:14px; }
+.profile-row{ display:flex; align-items:center; gap:10px; margin-top:6px; }
+.profile-row img{ width:46px; height:46px; border-radius:50%; object-fit:cover; box-shadow:0 6px 16px rgba(16,24,40,0.08); }
 
-.testi-card img {
-    width: 55px;
-    height: 55px;
-    border-radius: 50%;
-    object-fit: cover;
+/* Responsive: item widths to show 1/2/3/4 columns */
+@media (max-width: 635px){
+  .left-col{ flex-basis:100%; max-width:100%; padding-right:0; margin-bottom:12px;padding-top: 1.3rem; }
+  .testi-shell{ flex-direction:column; padding:20px;height: auto; }
+  .testi-card{ width:100%; flex-basis:100%; }
 }
-
-.testi-card h5 {
-    margin-top: 15px;
-    margin-bottom: 0;
-    color: #00796b;
+@media (min-width: 576px) and (max-width: 902px){
+  /* tablet small: 2 visible cards */
+  .testi-card{ width: calc((100% - 20px) / 1 ); flex-basis: calc((100% - 20px) / 1 ); }
 }
-
-.testi-role {
-    font-size: 13px;
-    color: #777;
-    margin-bottom: 15px;
+@media (min-width: 900px) and (max-width: 1199px){
+  /* tablet large to small desktop: 3 visible cards */
+  .testi-card{ width: calc((100% - 40px) / 2 ); flex-basis: calc((100% - 40px) / 2 ); }
 }
-
-.testi-text {
-    font-size: 14px;
-    color: #444;
-}
-
-/* SLIDE ANIMATION */
-@keyframes slide {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
+@media (min-width: 1200px){
+  /* large desktop: 4 visible cards */
+  .testi-card{ width: calc((100% - 60px) / 3 ); flex-basis: calc((100% - 60px) / 3 ); }
 }
 </style>
 </head>
-
 <body>
 
-<section class="testimonial-section container">
-    <div class="row align-items-center">
+<!-- Hidden reference (your uploaded file URL / local path) -->
+<!-- <img class="ref-image" src="assets/images/about-bg.png" alt="reference"> -->
+<section>
+<div class="container-custom">
+  <!-- Trust header -->
+  <div class="trust-row">
+    <h3>Read reviews, ride with confidence.</h3>
+    <p><strong style="color:#0b845a">4.2/5</strong> • <strong style="color:#0b845a">Trustpilot</strong> • Based on 5210 reviews</p>
+  </div>
 
-        <!-- LEFT CONTENT -->
-        <div class="col-lg-4 ps-5 left-content">
-            <h3>Clients</h3>
-            <h2>Testimonials</h2>
+  <!-- Testimonial section -->
+  <div class="testi-shell">
 
-            <div class="arrow-box mt-4">
-                <span>&#10094;</span>
-                <span>&#10095;</span>
-            </div>
-        </div>
+    <!-- LEFT fixed -->
+    <div class="left-col">
+      <div class="left-title">What our<br>supporters are saying</div>
+      <div class="left-desc">Empowering rural children through sports, discipline and teamwork.</div>
 
-        <!-- RIGHT SIDE CARDS -->
-        <div class="col-lg-8 right-bg">
-            <div class="carousel-track">
-
-                <!-- CARD 1 -->
-                <div class="testi-card">
-                    <img src="https://i.pravatar.cc/150?img=3">
-                    <h5>Yohan Ruso</h5>
-                    <p class="testi-role">CEO & Founder</p>
-                    <p class="testi-text">
-                        “Dizbiat provided us with great service and directions in a very short time. 
-                        Though it wasn’t easy to extract the data, they found a perfect method.”
-                    </p>
-                </div>
-
-                <!-- CARD 2 -->
-                <div class="testi-card">
-                    <img src="https://i.pravatar.cc/150?img=5">
-                    <h5>Dana Weiss</h5>
-                    <p class="testi-role">Developer</p>
-                    <p class="testi-text">
-                        “Very responsive & quick team. They helped us set everything up and get the info we needed.”
-                    </p>
-                </div>
-
-                <!-- CARD 3 -->
-                <div class="testi-card">
-                    <img src="https://i.pravatar.cc/150?img=7">
-                    <h5>Michael Lee</h5>
-                    <p class="testi-role">Manager</p>
-                    <p class="testi-text">
-                        “Amazing work delivered on time with high professionalism. Highly recommended!”
-                    </p>
-                </div>
-
-                <!-- DUPLICATE FOR INFINITE LOOP -->
-                <div class="testi-card">
-                    <img src="https://i.pravatar.cc/150?img=3">
-                    <h5>Yohan Ruso</h5>
-                    <p class="testi-role">CEO & Founder</p>
-                    <p class="testi-text">
-                        “Dizbiat provided us with great service and directions in a very short time.”
-                    </p>
-                </div>
-
-                <div class="testi-card">
-                    <img src="https://i.pravatar.cc/150?img=5">
-                    <h5>Dana Weiss</h5>
-                    <p class="testi-role">Developer</p>
-                    <p class="testi-text">
-                        “Very responsive & quick team. Amazing experience overall.”
-                    </p>
-                </div>
-
-            </div>
-        </div>
-
+      <div class="controls-row">
+        <!-- button aligned to right -->
+        <a class="btn-explore ms-auto" href="testimonial.html">Explore All Testimonials</a>
+      </div>
     </div>
+
+    <!-- RIGHT - carousel -->
+    <div class="right-col">
+      <div class="carousel-viewport">
+        <div class="carousel-track" id="carouselTrack">
+          <!-- Cards: initial set - script will duplicate these for seamless loop -->
+          <div class="testi-card">
+            <p class="testi-text">“This sports club changed my child's life — he learned discipline, confidence and now plays in inter-school matches. Coaches are very dedicated.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="profile-row"><img src="https://i.pravatar.cc/150?img=12" alt=""><div><strong>Arun Kumar</strong><div style="color:var(--muted);font-size:13px">Community Volunteer</div></div></div>
+          </div>
+
+          <div class="testi-card">
+            <p class="testi-text">“Kids who never had training are now confidently competing. The training, nutrition camps and mentorship are excellent.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="profile-row"><img src="https://i.pravatar.cc/150?img=25" alt=""><div><strong>Divya Nair</strong><div style="color:var(--muted);font-size:13px">School Teacher</div></div></div>
+          </div>
+
+          <div class="testi-card">
+            <p class="testi-text">“The club builds teamwork and leadership. Our rural children now have a safe place to train and grow their skills.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="profile-row"><img src="https://i.pravatar.cc/150?img=32" alt=""><div><strong>Mahesh R</strong><div style="color:var(--muted);font-size:13px">Local Coach</div></div></div>
+          </div>
+
+          <div class="testi-card">
+            <p class="testi-text">“They teach more than sport — respect, health and community pride. So grateful for this initiative in our village.”</p>
+            <div class="stars">★★★★★</div>
+            <div class="profile-row"><img src="https://i.pravatar.cc/150?img=47" alt=""><div><strong>Shanthi</strong><div style="color:var(--muted);font-size:13px">Parent</div></div></div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
 </section>
 
 <script>
-// Pause on hover (optional)
-const track = document.querySelector(".carousel-track");
-track.addEventListener("mouseenter", () => track.style.animationPlayState = "paused");
-track.addEventListener("mouseleave", () => track.style.animationPlayState = "running");
-</script>
+/*
+  Pure JS + GSAP continuous carousel (right -> left)
+  Responsive: item widths set by CSS breakpoints; duplicates track content to create seamless loop.
+  Speed choice: medium (B). We calculate duration dynamically from original content width.
+*/
 
+(function(){
+  const track = document.getElementById('carouselTrack');
+  let tl; // GSAP timeline instance
+  let resizeTimer;
+
+  // Duplicate items to allow seamless looping
+  function duplicateItems() {
+    // Clear duplicates if any
+    // Keep only original items (first set) before duplicating
+    const all = Array.from(track.children);
+    // If duplicates already present (more than unique set), reset to first unique set
+    // We'll detect uniqueness by using a data attribute
+    const originals = all.filter(el => !el.dataset.duplicate);
+    // remove any existing duplicates
+    all.forEach(el => { if (el.dataset.duplicate) track.removeChild(el); });
+    // clone originals and mark them
+    originals.forEach(node => {
+      const clone = node.cloneNode(true);
+      clone.dataset.duplicate = '1';
+      track.appendChild(clone);
+    });
+  }
+
+  // Compute widths and create animation
+  function createAnimation() {
+    // kill old timeline
+    if (tl) tl.kill();
+
+    // ensure duplicates present
+    duplicateItems();
+
+    // Wait a frame to ensure layout applied
+    requestAnimationFrame(() => {
+      // width of the original set (half of track because we duplicated)
+      const children = Array.from(track.children);
+      const totalWidth = children.reduce((sum, el) => sum + el.getBoundingClientRect().width + parseFloat(getComputedStyle(track).gap || 0), 0);
+      // original width is half (we duplicated)
+      const originalWidth = totalWidth / 2;
+
+      // Medium speed chosen: base factor (seconds per 1000px)
+      const baseSecondsPer1000px = 18; // medium. Increase for slower.
+      const duration = Math.max(8, (originalWidth / 1000) * baseSecondsPer1000px);
+
+      // Reset transform
+      gsap.set(track, { x: 0 });
+
+      // animate x from 0 to -originalWidth
+      tl = gsap.to(track, {
+        x: -originalWidth,
+        duration: duration,
+        ease: "none",
+        repeat: -1
+      });
+    });
+  }
+
+  // initialize on DOM ready
+  function init() {
+    // ensure we have at least one child to duplicate
+    if (!track || track.children.length === 0) return;
+
+    // Duplicate once and create animation
+    duplicateItems();
+    createAnimation();
+
+    // Recreate on resize (debounced)
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(() => {
+        createAnimation();
+      }, 150);
+    });
+  }
+
+  // Pause on hover (optional): uncomment to enable
+  // track.addEventListener('mouseenter', () => tl && tl.pause());
+  // track.addEventListener('mouseleave', () => tl && tl.play());
+
+  // Kick off
+  document.addEventListener('DOMContentLoaded', init);
+})();
+</script>
 </body>
 </html>
